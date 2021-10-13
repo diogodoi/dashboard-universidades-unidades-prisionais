@@ -45,7 +45,7 @@ def load_universidades():
 df_universidades = load_universidades()
 # df_universidades
 
-meso = gpd.read_file("SP_Mesorregioes_2020\SP_Mesorregioes_2020.shp")
+meso = gpd.read_file("SP_Mesorregioes_2020/SP_Mesorregioes_2020.shp")
 meso['colors'] = ['#EAEAE0'for i in range(15)]
 
 data_load_state.text("Done!")
