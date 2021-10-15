@@ -37,7 +37,7 @@ df_CDPS = load_CDPS()
 # df_CDPS
 
 #UNIVERSIDADES
-@st.cache
+# @st.cache
 def load_universidades():
     path = 'Universidade.csv'
     df_universidades = pd.read_csv(path)
@@ -172,7 +172,7 @@ st.pydeck_chart(pdk.Deck(
             extruded=True,            
         ),
     ],
-            tooltip= {"html": "<b>{NOME} <br/> <b> {ENDERECO}<br/> {TOTAL}",
+            tooltip= {"html": "<b>{NOME} <br/> <b> {ENDERECO}",
              "style": {"backgroundColor": "steelblue","color": "white"}},
             
     
@@ -180,7 +180,7 @@ st.pydeck_chart(pdk.Deck(
 
 if st.sidebar.checkbox('Mostrar dados das universidades'):
     st.subheader('Dados das Universidades')
-    st.write(filtred_universidade[['NOME','UNIDADE','REGIME','ENDERECO','CONTATO','TELEFONE']])
+    st.write(filtred_universidade[['NOME','UNIDADE','ENDERECO','CONTATO','TELEFONE']])
     st.subheader('Dados CDPs')
 
 if st.sidebar.checkbox('Mostrar dados das CDPs'):   
